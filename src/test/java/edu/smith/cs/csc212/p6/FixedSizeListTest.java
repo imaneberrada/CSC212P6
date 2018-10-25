@@ -159,9 +159,9 @@ public class FixedSizeListTest {
 	
 	@Test
 	public void testGetFrontTest() {
-		//P6List<String> data = new FixedSizeList<String>(2);
-		//data.addFront("2");
-		//Assert.assertEquals("2", data.getFront());
+		P6List<String> data = new FixedSizeList<String>(2);
+		data.addFront("2");
+		Assert.assertEquals("2", data.getFront());
 		
 		P6List<String> data2 = new FixedSizeList<String>(0);
 		
