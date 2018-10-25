@@ -15,6 +15,7 @@ public class FixedSizeList<T> implements P6List<T> {
 
 	@Override
 	public T removeFront() {
+		
 		return removeIndex(0);
 	}
 
@@ -23,9 +24,11 @@ public class FixedSizeList<T> implements P6List<T> {
 		if (this.size() == 0) {
 			throw new EmptyListError();
 		}
+		//fill-1: end of list
+		T value = this.getIndex(fill-1);
+		this.array[fill-1] = null;
 		fill--;
-		T value = this.getIndex(fill);
-		this.array[fill] = null;
+		
 		return value;
 	}
 
